@@ -47,10 +47,12 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.1443271743" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__START=main"/>
 									<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
-									<listOptionValue builtIn="false" value="__NO_SYSTEM_INIT"/>
+									<listOptionValue builtIn="false" value="STM32L152xE"/>
 								</option>
-								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.1215442501" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.1215442501" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/core/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/device/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/peripherials/inc}&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.937474309" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
 							</tool>
@@ -58,10 +60,12 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.619382351" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__START=main"/>
 									<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
-									<listOptionValue builtIn="false" value="__NO_SYSTEM_INIT"/>
+									<listOptionValue builtIn="false" value="STM32L152xE"/>
 								</option>
-								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.622162834" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" valueType="includePath">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.622162834" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/core/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/device/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/peripherials/inc}&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1512451605" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
 							</tool>
@@ -104,6 +108,21 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1602322811.270739050" name="stm32l1xx_ll_fsmc.c" rcbsApplicability="disable" resourcePath="drivers/peripherials/src/stm32l1xx_ll_fsmc.c" toolsToInvoke="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.341954638.1767608955">
+						<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.341954638.1767608955" name="GNU ARM Cross C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.341954638">
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.648462517" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" valueType="definedSymbols">
+								<listOptionValue builtIn="false" value="__START=main"/>
+								<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
+								<listOptionValue builtIn="false" value="STM32L152xE"/>
+								<listOptionValue builtIn="false" value="USE_FULL_LL_DRIVER"/>
+							</option>
+							<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1668308341" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+						</tool>
+					</fileInfo>
+					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1602322811.350485859" name="stm32l1xx_ll_fsmc.h" rcbsApplicability="disable" resourcePath="drivers/peripherials/inc/stm32l1xx_ll_fsmc.h" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="drivers/peripherials/src/stm32l1xx_ll_sdmmc.c|drivers/peripherials/src/stm32l1xx_ll_fsmc.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -154,10 +173,12 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.1191865772" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__START=main"/>
 									<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
-									<listOptionValue builtIn="false" value="__NO_SYSTEM_INIT"/>
+									<listOptionValue builtIn="false" value="STM32L152xE"/>
 								</option>
-								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.535241432" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.535241432" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/core/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/device/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/peripherials/inc}&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.393943002" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
 							</tool>
@@ -165,10 +186,12 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.2018853366" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__START=main"/>
 									<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
-									<listOptionValue builtIn="false" value="__NO_SYSTEM_INIT"/>
+									<listOptionValue builtIn="false" value="STM32L152xE"/>
 								</option>
-								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.468880951" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" valueType="includePath">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.468880951" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/core/Include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/device/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/peripherials/inc}&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.717034633" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
 							</tool>
@@ -211,6 +234,21 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.660278755.1161475455" name="stm32l1xx_ll_fsmc.c" rcbsApplicability="disable" resourcePath="drivers/peripherials/src/stm32l1xx_ll_fsmc.c" toolsToInvoke="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1782413173.80117615">
+						<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1782413173.80117615" name="GNU ARM Cross C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1782413173">
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.1437808398" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" valueType="definedSymbols">
+								<listOptionValue builtIn="false" value="__START=main"/>
+								<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
+								<listOptionValue builtIn="false" value="STM32L152xE"/>
+								<listOptionValue builtIn="false" value="USE_FULL_LL_DRIVER"/>
+							</option>
+							<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1508155109" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+						</tool>
+					</fileInfo>
+					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.660278755.152529836" name="stm32l1xx_ll_fsmc.h" rcbsApplicability="disable" resourcePath="drivers/peripherials/inc/stm32l1xx_ll_fsmc.h" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="drivers/peripherials/src/stm32l1xx_ll_sdmmc.c|drivers/peripherials/src/stm32l1xx_ll_fsmc.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
