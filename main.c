@@ -1,5 +1,46 @@
+#include "stm32l1xx_ll_rcc.h"
+#include "stm32l1xx_ll_gpio.h"
+#include "stm32l1xx_ll_bus.h"
+#include "stm32l1xx_ll_tim.h"
+#include "stm32l152xe.h"
+
+
+void TIM2_IRQHandler(void)
+{
+	LL_GPIO_TogglePin(GPIOA,LL_GPIO_PIN_5);
+
+	LL_TIM_ClearFlag_UPDATE(TIM2);
+}
+
 void main (void)
 {
+	LL_GPIO_InitTypeDef GPIO_InitStruct;
+	LL_TIM_InitTypeDef TIM_InitStruct;
+
+
+	GPIO_InitStruct.Pin 		= LL_GPIO_PIN_5;
+	GPIO_InitStruct.Mode 		= LL_GPIO_MODE_OUTPUT;
+	GPIO_InitStruct.Speed      = LL_GPIO_SPEED_FREQ_LOW;
+	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+	GPIO_InitStruct.Pull       = LL_GPIO_PULL_NO;
+	GPIO_InitStruct.Alternate  = LL_GPIO_AF_0;
+
+	LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOA);
+	LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+	LL_GPIO_SetOutputPin(GPIOA,LL_GPIO_PIN_5);
+
+	LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_ALL);
+	TIM_InitStruct.Prescaler         = 1000;
+	TIM_InitStruct.CounterMode       = LL_TIM_COUNTERMODE_UP;
+	TIM_InitStruct.Autoreload        = 3200;
+	TIM_InitStruct.ClockDivision     = LL_TIM_CLOCKDIVISION_DIV1;
+	LL_TIM_Init(TIM2, &TIM_InitStruct);
+	LL_TIM_EnableIT_UPDATE(TIM2);
+	LL_TIM_EnableUpdateEvent(TIM2);
+	NVIC_EnableIRQ(TIM2_IRQn);
+	LL_TIM_EnableCounter(TIM2);
+
 	while(1)
 	{
 	}

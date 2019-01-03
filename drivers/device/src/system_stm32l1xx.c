@@ -61,7 +61,8 @@
   */
 
 #include "stm32l1xx.h"
-
+#include "stm32l1xx_ll_rcc.h"
+#include "stm32l1xx_ll_bus.h"
 /**
   * @}
   */
@@ -182,6 +183,30 @@ void SystemInit (void)
 #else
   SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH. */
 #endif
+
+  /*Configure HSI Oscillator P132*/
+  LL_RCC_HSI_Enable();
+  LL_RCC_HSI_SetCalibTrimming(LL_RCC_HSI_GetCalibration());/*OPTIONAL Calibration */
+  while(LL_RCC_HSI_IsReady() == 0);
+
+  /*Configure PLL P133*/
+  LL_RCC_PLL_Disable();
+  while(LL_RCC_PLL_IsReady() != 0);
+  LL_RCC_PLL_ConfigDomain_SYS(LL_RCC_PLLSOURCE_HSI, LL_RCC_PLL_MUL_4, LL_RCC_PLL_DIV_2);
+  LL_RCC_PLL_Enable();
+  while(LL_RCC_PLL_IsReady() == 0);
+
+  /*Configure SYSCLK*/
+  LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_HSI);
+
+  /*Configure AHB prescaler*/
+  LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
+
+  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_1);
+
+
+
+  SystemCoreClockUpdate();
 }
 
 /**
