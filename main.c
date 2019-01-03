@@ -17,19 +17,27 @@ void main (void)
 	LL_GPIO_InitTypeDef GPIO_InitStruct;
 	LL_TIM_InitTypeDef TIM_InitStruct;
 
-
+	/*GPIO INIT PA5*/
 	GPIO_InitStruct.Pin 		= LL_GPIO_PIN_5;
 	GPIO_InitStruct.Mode 		= LL_GPIO_MODE_OUTPUT;
 	GPIO_InitStruct.Speed      = LL_GPIO_SPEED_FREQ_LOW;
 	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
 	GPIO_InitStruct.Pull       = LL_GPIO_PULL_NO;
 	GPIO_InitStruct.Alternate  = LL_GPIO_AF_0;
-
 	LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOA);
 	LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-	LL_GPIO_SetOutputPin(GPIOA,LL_GPIO_PIN_5);
+	/*GPIO INIT PC13*/
+	GPIO_InitStruct.Pin 		= LL_GPIO_PIN_13;
+	GPIO_InitStruct.Mode 		= LL_GPIO_MODE_INPUT;
+	GPIO_InitStruct.Speed      = LL_GPIO_SPEED_FREQ_LOW;
+	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+	GPIO_InitStruct.Pull       = LL_GPIO_PULL_NO;
+	GPIO_InitStruct.Alternate  = LL_GPIO_AF_0;
+	LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOC);
+	LL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+	/*TIMER INIT*/
 	LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_ALL);
 	TIM_InitStruct.Prescaler         = 1000;
 	TIM_InitStruct.CounterMode       = LL_TIM_COUNTERMODE_UP;
@@ -43,5 +51,10 @@ void main (void)
 
 	while(1)
 	{
+		if(LL_GPIO_IsInputPinSet(GPIOC, LL_GPIO_PIN_13)) {
+			LL_TIM_DisableCounter(TIM2);
+		} else {
+			LL_TIM_EnableCounter(TIM2);
+		}
 	}
 }
