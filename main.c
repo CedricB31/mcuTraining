@@ -39,15 +39,15 @@ void main (void)
 
 	/*TIMER INIT*/
 	LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_ALL);
-	TIM_InitStruct.Prescaler         = 1000;
-	TIM_InitStruct.CounterMode       = LL_TIM_COUNTERMODE_UP;
-	TIM_InitStruct.Autoreload        = 3200;
-	TIM_InitStruct.ClockDivision     = LL_TIM_CLOCKDIVISION_DIV1;
-	LL_TIM_Init(TIM2, &TIM_InitStruct);
-	LL_TIM_EnableIT_UPDATE(TIM2);
-	LL_TIM_EnableUpdateEvent(TIM2);
-	NVIC_EnableIRQ(TIM2_IRQn);
-	LL_TIM_EnableCounter(TIM2);
+	TIM_InitStruct.Prescaler         = 1000;						//Divise CLK timer by 1000
+	TIM_InitStruct.CounterMode       = LL_TIM_COUNTERMODE_UP;		//Count positively
+	TIM_InitStruct.Autoreload        = 3200;						//Autoreload when timer reaches 3200
+	TIM_InitStruct.ClockDivision     = LL_TIM_CLOCKDIVISION_DIV1;	//Timer CLock to CPU clock (32000000Hz)
+	LL_TIM_Init(TIM2, &TIM_InitStruct); //Timer Init (IT all CPUCLK/Prescaler/Autoreload => 32Mhz/1000/3200=10Hz => ALL 0.1sec
+	LL_TIM_EnableUpdateEvent(TIM2);		//Enable Update event
+	LL_TIM_EnableIT_UPDATE(TIM2);		//Enable IT when timer update (autoreload)
+	NVIC_EnableIRQ(TIM2_IRQn);			//Enable core Interrupt
+	LL_TIM_EnableCounter(TIM2);			//Start Timer
 
 	while(1)
 	{

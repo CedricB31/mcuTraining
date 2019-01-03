@@ -49,6 +49,7 @@
 									<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
 									<listOptionValue builtIn="false" value="STM32L152xE"/>
 									<listOptionValue builtIn="false" value="USE_FULL_LL_DRIVER"/>
+									<listOptionValue builtIn="false" value="__STARTUP_CLEAR_BSS"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.1215442501" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" useByScannerDiscovery="true" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/core/Include}&quot;"/>
@@ -63,6 +64,7 @@
 									<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
 									<listOptionValue builtIn="false" value="STM32L152xE"/>
 									<listOptionValue builtIn="false" value="USE_FULL_LL_DRIVER"/>
+									<listOptionValue builtIn="false" value="__STARTUP_CLEAR_BSS"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.622162834" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/core/Include}&quot;"/>
@@ -117,6 +119,7 @@
 								<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
 								<listOptionValue builtIn="false" value="STM32L152xE"/>
 								<listOptionValue builtIn="false" value="USE_FULL_LL_DRIVER"/>
+								<listOptionValue builtIn="false" value="__STARTUP_CLEAR_BSS"/>
 							</option>
 							<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1668308341" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
 						</tool>
@@ -191,6 +194,7 @@
 									<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
 									<listOptionValue builtIn="false" value="STM32L152xE"/>
 									<listOptionValue builtIn="false" value="USE_FULL_LL_DRIVER"/>
+									<listOptionValue builtIn="false" value="__STARTUP_CLEAR_BSS"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.535241432" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/core/Include}&quot;"/>
@@ -205,6 +209,7 @@
 									<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
 									<listOptionValue builtIn="false" value="STM32L152xE"/>
 									<listOptionValue builtIn="false" value="USE_FULL_LL_DRIVER"/>
+									<listOptionValue builtIn="false" value="__STARTUP_CLEAR_BSS"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.468880951" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mcuTraining/drivers/core/Include}&quot;"/>
@@ -259,6 +264,7 @@
 								<listOptionValue builtIn="false" value="STARTUP_CLEAR_BSS"/>
 								<listOptionValue builtIn="false" value="STM32L152xE"/>
 								<listOptionValue builtIn="false" value="USE_FULL_LL_DRIVER"/>
+								<listOptionValue builtIn="false" value="__STARTUP_CLEAR_BSS"/>
 							</option>
 							<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1508155109" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
 						</tool>
